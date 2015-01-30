@@ -1,0 +1,75 @@
+﻿@{
+    var entries = (List<bankroll.domain.entities.Entry>)ViewBag.Entries;
+}
+
+<br /><br />
+
+<div class="col-xs-12">
+    <div class="btn-group">
+        <a href="@Url.Action("Add", "Entry")" class="btn btn-info">New Entry</a>
+    </div>
+</div>
+
+<hr /><hr />
+
+<div class="panel panel-default">
+    <div class="panel-heading">Last entries</div>
+    <div class="panel-body">
+        @if (entries != null && entries.Count > 0)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Buy In</th>
+                        <th>Cash Out</th>
+                        <th>Date</th>
+                        <th>Where</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                @foreach (var entry in ViewBag.Entries as List<bankroll.domain.entities.Entry>)
+                {
+                    <tr>
+                        <td>@entry.BuyIn</td>
+                        <td>@entry.CashOut</td>
+                        <td>@entry.Date.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            @if (entry.Online.HasValue && entry.Online.Value)
+                            {
+                                <label>Online</label>
+                            }
+                            else
+                            {
+                                <label>Live</label>
+                            }
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Edit", "Entry", new { id = entry.Id })" class="btn btn-default btn-xs">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
+                            </a>
+                            @using (Html.BeginForm("Delete", "Entry", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.Hidden("id", entry.Id)
+                                <button type="submit" class="btn btn-danger btn-xs">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete
+                                </button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <hr />
+            <div class="col-xs-12">
+                <div class="alert alert-warning" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    You don't have any entries yet. @Html.ActionLink("Add one?", "Add", "Entry")
+                </div>
+            </div>
+        }
+    </div>
+</div>

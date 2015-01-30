@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22310.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bankroll", "bankroll\bankroll.csproj", "{8E6B1366-A1CC-4DCB-A04B-99628FFD1365}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bankroll.domain", "bankroll.domain\bankroll.domain.csproj", "{BE6D7683-2D48-4A4F-A866-35BED4818B1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bankroll.database", "bankroll.database\bankroll.database.csproj", "{43F7C4E5-5FE9-40AF-9FD0-CE36A14238DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bankroll.repository", "bankroll.repository\bankroll.repository.csproj", "{93CC7A13-B2BA-4C1D-8E40-F1ADBEC29F34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bankroll.service", "bankroll.service\bankroll.service.csproj", "{BA996C31-5076-413E-A8D7-85C01869FF86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bankroll.test", "bankroll.test\bankroll.test.csproj", "{9C9D3D8C-DC3D-4286-87AE-3978648635DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E6B1366-A1CC-4DCB-A04B-99628FFD1365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E6B1366-A1CC-4DCB-A04B-99628FFD1365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E6B1366-A1CC-4DCB-A04B-99628FFD1365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E6B1366-A1CC-4DCB-A04B-99628FFD1365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE6D7683-2D48-4A4F-A866-35BED4818B1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE6D7683-2D48-4A4F-A866-35BED4818B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE6D7683-2D48-4A4F-A866-35BED4818B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE6D7683-2D48-4A4F-A866-35BED4818B1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F7C4E5-5FE9-40AF-9FD0-CE36A14238DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F7C4E5-5FE9-40AF-9FD0-CE36A14238DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F7C4E5-5FE9-40AF-9FD0-CE36A14238DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F7C4E5-5FE9-40AF-9FD0-CE36A14238DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93CC7A13-B2BA-4C1D-8E40-F1ADBEC29F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93CC7A13-B2BA-4C1D-8E40-F1ADBEC29F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93CC7A13-B2BA-4C1D-8E40-F1ADBEC29F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93CC7A13-B2BA-4C1D-8E40-F1ADBEC29F34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA996C31-5076-413E-A8D7-85C01869FF86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA996C31-5076-413E-A8D7-85C01869FF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA996C31-5076-413E-A8D7-85C01869FF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA996C31-5076-413E-A8D7-85C01869FF86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9D3D8C-DC3D-4286-87AE-3978648635DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9D3D8C-DC3D-4286-87AE-3978648635DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9D3D8C-DC3D-4286-87AE-3978648635DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9D3D8C-DC3D-4286-87AE-3978648635DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

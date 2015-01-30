@@ -1,0 +1,91 @@
+﻿@{ 
+    var entries = (List<bankroll.domain.entities.Entry>)ViewBag.Entries;
+}
+
+<hr />
+
+
+<div class="col-xs-12">
+    <div class="col-xs-6">
+        <div id="overallChartWinAndLose"></div>
+    </div>
+
+    <div class="col-xs-6">
+        <div id="overallChartWinOnlineVsLive"></div>
+    </div>
+
+    <div class="col-xs-6">
+        <div id="overallChartLive"></div>
+    </div>
+
+    <div class="col-xs-6">
+        <div id="overallChartOnline"></div>
+    </div>
+
+    
+</div>
+
+@*<div class="col-xs-12 row">
+    <div class="panel panel-default">
+        <div class="panel-heading">Last entries</div>
+        <div class="panel-body">
+            @if (entries != null && entries.Count > 0)
+        {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Buy In</th>
+                            <th>Cash Out</th>
+                            <th>Date</th>
+                            <th>Where</th>
+                        </tr>
+                    </thead>
+                    @foreach (var entry in ViewBag.Entries as List<bankroll.domain.entities.Entry>)
+                {
+                        <tr>
+                            <td>@entry.BuyIn</td>
+                            <td>@entry.CashOut</td>
+                            <td>@entry.Date.ToString("dd/MM/yyyy")</td>
+                            <td>
+                                @if (entry.Online.HasValue && entry.Online.Value)
+                            {
+                                    <label>Online</label>
+                            }
+                            else
+                            {
+                                    <label>Live</label>
+                            }
+                            </td>
+                        </tr>
+                }
+                </table>
+        }
+        else
+        {
+                <hr />
+                <div class="col-xs-12">
+                    <div class="alert alert-warning" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span>
+                        You don't have any entries yet. @Html.ActionLink("Add one?", "Add", "Entry")
+                    </div>
+                </div>
+        }
+        </div>
+    </div>
+</div>*@
+
+@section scripts {
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="~/Scripts/pages/charts.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            overallChartLive();
+            overallChartWinOnlineVsLive();
+            overallChartOnline();
+            overallChartWinAndLose();
+        });
+    </script>
+
+}
